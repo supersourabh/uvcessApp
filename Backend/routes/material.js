@@ -26,7 +26,7 @@ materialRouter.get("/:sem/:branch/:count", async (req, res) => {
 })
 
 
-materialRouter.get("/:sem/:branch/:type", async (req, res) => {
+materialRouter.get("/:sem/:branch/:type",isAuth, async (req, res) => {
     const sem = req.params.sem
     const branch = req.params.branch
     const type = req.params.type
